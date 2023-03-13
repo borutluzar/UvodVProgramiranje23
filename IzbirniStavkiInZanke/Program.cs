@@ -253,12 +253,17 @@ namespace SelectStatementsAndLoops
 
             // Če zanke ne želimo zaključiti popolnoma, ampak samo zaključiti izvajanje trenutnega koraka
             // in nadaljevati z naslednjim, uporabimo stavek continue.
+            int stDeljivihZVsajEnim = 0;
             for (i = 1; i < 100; i++)
             {
                 if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0)
+                {
+                    stDeljivihZVsajEnim++;
                     continue;
+                }
                 Console.WriteLine($"Število {i} ni deljivo z 2, 3 ali 5.");
             }
+            Console.WriteLine($"Število deljivih z 2, 3 ali 5 je {stDeljivihZVsajEnim}.");
 
             Console.Read();
         }

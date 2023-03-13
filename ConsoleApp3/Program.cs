@@ -5,6 +5,9 @@
         static void Main(string[] args)
         {
 
+
+
+
             Console.Read();
         }
 
@@ -171,6 +174,90 @@
             int procentiNaIzpitu = 64;
             string uspesen = procentiNaIzpitu >= 50 ? "Opravil!" : "Ni opravil :(";
             Console.WriteLine($"Študent je izpit {uspesen}");
+
+
+
+            // stavek switch
+
+        }
+
+        static void ScribblePredavanja3()
+        {
+            // Zanke 
+
+            // Zanka while 
+            int i = 3;
+            while (i > 0)
+            {
+                Console.WriteLine($"Trenutno je i enak {i}.");
+                i--; // enako kot i = i - 1;
+            }
+
+            // Zanka do - while (vedno se izvede vsaj enkrat, ker pogoj preverja po izvedbi jedra)
+            i = 3;
+            do
+            {
+                Console.WriteLine($"Trenutno je i enak {i}.");
+            }
+            while (i > 3);
+
+            // Zanka for
+            for (int k = 0 /* Začetna vrednost */; k < 10 /* Pogoj */; k++ /* Korak */)
+            {
+                if (k % 2 == 1)
+                {
+                    Console.WriteLine($"Trenutno je k enak {k}.");
+                }
+            }
+
+            // Zanka foreach
+            List<string> lstBesede = new List<string>() { "jutri", "bom", "doma" };
+            foreach (string beseda in lstBesede)
+            {
+                Console.WriteLine($"Vrednost spremenljivke beseda je {beseda}");
+            }
+
+
+            // Primer: izris kvadrata
+            //  a = 4
+            //  ****
+            //  *  *
+            //  *  *
+            //  ****
+
+            int a = 7;
+            for (i = 0; i < a; i++)
+            {
+                for (int j = 0; j < a; j++)
+                {
+                    string znak = " ";
+                    if (i == 0 || i == a - 1 || j == 0 || j == a - 1)
+                    {
+                        znak = "*";
+                    }
+
+                    Console.Write($"{znak}");
+                }
+                Console.WriteLine(); // Da se premaknemo v naslednjo vrstico
+            }
+
+
+            // Stavka break in continue
+            Console.WriteLine("Kdo je najboljši nogometaš na svetu?");
+            while (true)
+            {
+                string odgovor = Console.ReadLine();
+                if (odgovor == "Messi")
+                {
+                    Console.WriteLine("Odgovor je pravilen!");
+                    break; // Prekine izvajanje zanke
+                }
+                else
+                {
+                    Console.WriteLine("Odgovor ni pravilen!");
+                }
+            }
+
         }
     }
 }
