@@ -59,7 +59,7 @@ namespace VariablesAndTypes
 
             // Pri vrednosti lahko dodamo pripono D,
             // da eksplicitno povemo, da gre za tip double (ni pa nujno)
-            realnoStevilo = 3.14D; 
+            realnoStevilo = 3.14D;
             Console.WriteLine($"Izpis vrednosti spremenljivke tipa double s pripono D: {realnoStevilo}");
 
             // Imamo še dva druga tipa, vsakemu moramo pri vrednosti pripisati

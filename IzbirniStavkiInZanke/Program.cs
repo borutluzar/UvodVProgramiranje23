@@ -14,7 +14,7 @@ namespace SelectStatementsAndLoops
 
             // Ko želimo nek ukaz izvesti samo, če je izpolnjen dan pogoj,
             // uporabimo stavek if
-            int x = 3;
+            int x = 3;            
             if (x > 4)
             {
                 Console.WriteLine("Tole se ne bo izpisalo!");
